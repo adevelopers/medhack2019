@@ -1,6 +1,6 @@
 <template>
     <div class="schedule"><!-- Расписание для врача -->
-        <h1>Расписание</h1>
+        <h1>Расписание консультаций</h1>
         <h2 class="schedule-title">Сегодня</h2>
         <ul class="card-list">
             <li class="card" v-for="card, key in cards">

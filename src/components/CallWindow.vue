@@ -2,12 +2,16 @@
     <div class="call-component">
         <a class="btn" v-on:click="goBack()">Назад</a>
         <div class="layout" >
-            <div class="call">
+            <div class="call flex-col">
                 <div class="call-name">Call name</div>
                 <div class="call-video">
-                    <iframe src="https://appr.tc/r/31337" width=600px height=400px allow="geolocation; microphone; camera" scrolling="no">
+                    <iframe src="https://appr.tc/r/31337" width=816px height=400px allow="geolocation; microphone; camera" scrolling="no">
                         <p>Your browser does not support iframes.</p>
                     </iframe>
+                </div>
+                <div class="panel-bottom">
+                    <img alt="Vue logo" src="./assets/logo.png">
+                    <img alt="callend" src="./assets/callend.png"/>
                 </div>
             </div>
             <div class="log">
@@ -69,7 +73,7 @@
 
     .call-video {
         text-align: left;
-        width: 600px;
+        width: 816px;
     }
 
     .layout {
@@ -95,4 +99,19 @@
 
     }
 
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .flex-col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .panel-bottom {
+        background-color: #202D3D;
+        height: 108px;
+    }
 </style>
