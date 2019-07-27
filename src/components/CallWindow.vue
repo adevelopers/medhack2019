@@ -1,7 +1,6 @@
 <template>
     <div class="call-component">
         <a class="btn" v-on:click="goBack()">Назад</a>
-        <a class="btn" v-on:click="callClick()">Start</a>
         <div class="layout" >
             <div class="call">
                 <div class="call-name">Call name</div>
@@ -52,9 +51,6 @@
                 } ;
                 this.notes.push(newNote)
                 this.currentMessage = ""
-            },
-            callClick() {
-                
             }
         }
     }

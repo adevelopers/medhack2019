@@ -5,18 +5,22 @@
         <ul class="card-list">
             <li class="card" v-for="card, key in cards">
                 <!-- Карточка приёма -->
-                <div class="card-icon"></div>
-                <div class="card-name">Имя: {{card.name}}</div>
-                <div class="card-status">Стутс: {{card.status}}</div>
-                <div class="card-diagnose">Диагноз: {{card.diagnose}}</div>
-                <div class="card-buttons">
-                    <a class="card-button" >Перенести</a>
-                    <a class="card-button" v-on:click="call()">Звонок</a>
+                <div class="flex-row">
+                    <div class="card-icon">{{card.name | firstLetter}} {{card.name | secondLetter}}</div>
+                    <div class="flex-col card-titles">
+                        <div class="card-name">{{card.name}}</div>
+                        <div class="card-status">Стутс: {{card.status}}</div>
+                        <div class="card-diagnose">Диагноз: {{card.diagnose}}</div>
+                    </div>
+                    <div class="card-buttons">
+                        <a class="card-button btn-white" >Перенести</a>
+                        <a class="card-button" v-on:click="call()">Приём</a>
+                    </div>
                 </div>
-                <div class="card-panel--bottom">
-                    <div class="card-panel-icon icon-medcard"></div>
-                    <div class="card-panel-icon icon-analize"></div>
-                    <div class="card-panel-icon icon-naznacheniya" alt="Назначения"></div>
+                <div class="card-panel--bottom flex-row">
+                    <div class="card-panel-icon icon-medcard">Симптомы</div>
+                    <div class="card-panel-icon icon-analize">Анализы</div>
+                    <div class="card-panel-icon icon-naznacheniya" alt="Назначения">Лечение</div>
                 </div>
             </li>
         </ul>
@@ -111,24 +115,50 @@
     }
 
     .card {
+        border-radius: 5px;
         font-size: 18px;
         text-align: left;
         margin-bottom: 50px;
         margin-right: 40px;
-        border: 1px dotted #333;
+        /*border: 1px dotted #333;*/
+        box-shadow: 0 2px 12px #ccc;
         padding: 20px;
         height: 110px;
     }
 
-    .card-name,
-    .card-status,
-    .card-diagnose
-    {
-        font-weight: bold;
+    .card-icon {
+        border-radius: 25px;
+        background-color: #4EB9FA;
+        color: white;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 50px;
+        margin-right: 20px;
     }
 
+    .card-titles {
+        width: 600px;
+    }
+
+    .card-name {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .card-status, .card-diagnose {
+        color: #aaa;
+        font-size: 14px;
+    }
+
+
     .card-buttons {
-        float: right;
+        margin-top: 20px;
+        width: 400px;
+        text-align: right;
+
+        flex-grow: 1;
     }
 
     .card-button {
@@ -139,6 +169,44 @@
         background-color: blueviolet;
         padding: 10px;
         margin-right: 20px;
+        background-color: #4EB9FA;
+        border-radius: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
+
+    .btn-white {
+        background-color: #FFF !important;
+        color: #4EB9FA;
+        border: 1px solid #4EB9FA;
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .flex-col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-panel--bottom {
+        margin-top: 10px;
+        margin-left: 70px;
+    }
+
+    .card-panel-icon {
+        font-size: 14px;
+        color: white;
+        border-radius: 25px;
+        background-color: #6FCF97;
+        padding: 0px 20px;
+        margin-right: 16px;
+        height: 32px;
+        line-height: 32px;
+    }
+
+
 
 </style>

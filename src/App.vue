@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import MedMain from './components/MedMain.vue'
+import MedMain from './components/MedMain'
 import Schedule from './components/Schedule'
 import CallWindow from './components/CallWindow'
 import VueRouter from 'vue-router'
@@ -20,8 +20,6 @@ const routes = [
 const router = new VueRouter({
   routes // сокращённая запись для `routes: routes`
 })
-
-
 
 
 export default {
