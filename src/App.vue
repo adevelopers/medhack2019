@@ -1,17 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MedMain from './components/MedMain.vue'
+import Schedule from './components/Schedule'
+import CallWindow from './components/CallWindow'
+import VueRouter from 'vue-router'
+
+const routes = [
+  { path: '/', component: Schedule },
+  { path: '/call', component: CallWindow }
+]
+
+// 3. Создаём экземпляр маршрутизатора и передаём маршруты в опции `routes`
+// Вы можете передавать и дополнительные опции, но пока не будем усложнять.
+const router = new VueRouter({
+  routes // сокращённая запись для `routes: routes`
+})
+
+
+
 
 export default {
   name: 'app',
+  router: router,
   components: {
-    HelloWorld
+    MedMain
   }
 }
 </script>
