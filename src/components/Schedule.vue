@@ -6,7 +6,7 @@
             <li class="card" v-for="card, key in cards">
                 <!-- Карточка приёма -->
                 <div class="flex-row">
-                    <div class="card-icon">{{card.name | firstLetter}} {{card.name | secondLetter}}</div>
+                    <div class="card-icon">{{card.name | firstLetter}}{{card.name | secondLetter}}</div>
                     <div class="flex-col card-titles">
                         <div class="card-name">{{card.name}}</div>
                         <div class="card-status">Стутс: {{card.status}}</div>
@@ -48,36 +48,36 @@
                         id: "1",
                         name:"Лупул Андрей",
                         status: "Вторичный",
-                        diagnose: "Остро расператорная ангина",
+                        diagnose: "Катаральная ангина",
                         date: "12.10.2019"
                     },
                     {
                         id: "2",
-                        name:"Сказочный",
+                        name:"Алиева Анашен Эдуардовна",
                         status: "Вторичный",
-                        diagnose: "Болен",
+                        diagnose: "Гастрит",
                         date: "11.10.2019"
                     },
                     {
                         id: "3",
-                        name:"Сказочный",
+                        name:"Варламов дмитрий",
                         status: "Вторичный",
-                        diagnose: "Болен",
-                        date: "11.10.2019"
+                        diagnose: "Пневмания",
+                        date: "06.08.2019"
                     },
                     {
                         id: "4",
-                        name:"Сказочный",
+                        name:"Франц Адольфович Витте",
                         status: "Вторичный",
-                        diagnose: "Болен",
+                        diagnose: "Туберкулёз",
                         date: "11.10.2019"
                     },
                     {
                         id: "5",
-                        name:"Сказочный",
+                        name:"Мелкумов Алексей Евдокимович",
                         status: "Вторичный",
                         diagnose: "Болен",
-                        date: "11.10.2019"
+                        date: "08.10.2019"
                     },
                 ];
             },
