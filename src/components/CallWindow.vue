@@ -84,6 +84,7 @@
 </script>
 
 <style scoped>
+
     .btn {
         width: 300px;
         height: 40px;
@@ -151,6 +152,7 @@
 
     .callend {
         margin-left: 40px;
+        cursor: pointer;
     }
 
     .log {

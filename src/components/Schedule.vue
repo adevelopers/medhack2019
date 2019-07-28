@@ -93,11 +93,7 @@
                     })
             },
             call() {
-                console.log("Query", this.$route.path);
-                // location.href= "/call/";
                 this.$router.push('/call')
-
-                // this.$router.push('/calling/')
             }
         }
 
@@ -105,6 +101,10 @@
 </script>
 
 <style scoped>
+    a {
+        cursor: pointer;
+    }
+
     .schedule-title {
         text-align: left;
         padding-left: 40px;
