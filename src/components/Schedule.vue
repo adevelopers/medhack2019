@@ -85,8 +85,6 @@
                 axios.get('/api/cards')
                     .then(({ data }) => {
                         this.items = data.messages
-                        let counter = document.getElementById("notifications_count")
-                        counter.innerHTML = Object.keys(data.messages).length
                     })
                     .catch(e => {
                         this.errors.push(e)
@@ -205,6 +203,7 @@
         margin-right: 16px;
         height: 32px;
         line-height: 32px;
+        cursor: pointer;
     }
 
 
